@@ -1,4 +1,5 @@
 ﻿using Login.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Login.Controllers
 {
+    [Authorize(AuthenticationSchemes = "autenticacao")]
     public class ClientesController : Controller
     {
         public IActionResult Index()

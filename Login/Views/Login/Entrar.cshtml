@@ -1,0 +1,13 @@
+﻿<h1>Faça o login</h1>
+
+<form method="post" action="/Login/Entrar">
+    Usuário<input type="text" name="usuario" />
+    <br />
+    Senha<input type="password" name="senha" />
+    <br />
+    <button type="submit" >Logar</button>
+</form>
+@if (TempData["erro"]!= null)
+{
+<h1>@TempData["erro"]</h1>
+}
